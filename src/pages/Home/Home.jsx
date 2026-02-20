@@ -13,14 +13,14 @@ const Home = ({ changePage, lang }) => {
             <Helmet>
                 <title>
                     {lang === 'en' 
-                        ? 'Boiler Room Cochem | Best Burgers & Schnitzel' 
-                        : 'Boiler Room Cochem | Die besten Burger & Schnitzel'}
+                        ? 'Boiler Room Cochem | Fresh Burgers & German Classics' 
+                        : 'Boiler Room Cochem | Frische Burger & Imbiss-Klassiker'}
                 </title>
                 <meta 
                     name="description" 
                     content={lang === 'en' 
-                        ? 'Visit Boiler Room in Cochem for fresh burgers, fresh schnitzel, and more. Authentic industrial vibes and great food at Industriering 6.' 
-                        : 'Besuchen Sie den Boiler Room in Cochem. Frische Schnitzel und mehr am Industriering 6.'} 
+                        ? 'Enjoy fresh, handmade burgers and schnitzel in a cozy atmosphere at Boiler Room Cochem. Located at Industriering 6.' 
+                        : 'Genießen Sie frische, handgemachte Burger und Schnitzel in gemütlicher Atmosphäre im Boiler Room Cochem am Industriering 6.'} 
                 />
             </Helmet>
             <div className={`${styles.home} page-enter`}>
