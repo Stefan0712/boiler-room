@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stefan0712.github.io/boiler-room/sitemap.xml
