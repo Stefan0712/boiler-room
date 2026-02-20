@@ -41,12 +41,23 @@ export const translations = {
         openHoursTitle: 'Open Hours',
         language: 'SPRACHE',
         address: 'Adresse',
-        openHours: {
-            monThu: 'Montag - Donnerstag',
-            fri: "Freitag",
-            satSun: 'Samstag - Sonntag',
-            closed: 'Closed'
-        },
+        categories: [
+          {
+              title: 'Burger',
+              description: 'Frisch zubereitete, saftige Burger – inklusive des legendären Stahlburgers.',
+              linkText: 'BURGER ENTDECKEN'
+          },
+          {
+              title: 'Schnitzel & Nuggets',
+              description: 'Knusprige Schnitzel mit hausgemachten Saucen und Beilagen.',
+              linkText: 'SCHNITZEL ENTDECKEN'
+          },
+          {
+              title: 'Frikadellen',
+              description: 'Herzhafte Frikadellen – ein Imbiss-Klassiker, perfekt gewürzt.',
+              linkText: 'FRIKADELLEN ENTDECKEN'
+          },
+        ], 
         phone: 'Telefon',
         contact: 'Contact',
         copyright: 'Alle Rechte vorbehalten.',

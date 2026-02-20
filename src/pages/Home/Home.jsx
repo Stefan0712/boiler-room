@@ -41,7 +41,7 @@ const Home = ({ changePage, lang }) => {
             {/* Features/Highlights Section */}
             <section className="section-padding container">
                 <div className={styles.featuresGrid}>
-                    {content.categories.map((cat, index) => (
+                    {content?.categories?.map((cat, index) => (
                         <div key={index} className={`card ${styles.featureCard}`}>
                             <h3>{cat.title}</h3>
                             <p className="text-muted">{cat.description}</p>
