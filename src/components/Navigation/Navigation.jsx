@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import styles from './Navigation.module.css';
 import { translations } from '../../translations';
+import Logo from '../../assets/logo.png'
 
 const Navbar = ({toggleLang, lang, changePage}) => {
 
@@ -27,6 +28,7 @@ const Navbar = ({toggleLang, lang, changePage}) => {
         <nav className={styles.navbar}>
             <div className={`${styles.navContainer} container`}>
                 <h2 className={styles.navLogo} onClick={()=>changePage('home')}>
+                    <img src={Logo} alt='Boiler Room' />
                     Boiler Room
                 </h2>
 

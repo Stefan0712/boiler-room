@@ -21,6 +21,12 @@
     font-weight: 800;
     color: var(--color-text-main);
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navLogo img {
+    height: 60px;
 }
 
 .navLinks {

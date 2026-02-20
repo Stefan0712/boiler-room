@@ -8,7 +8,7 @@ export const translations = {
         categories: [
             {
                 title: 'Burgers',
-                description: 'Freshly made, juicy burgers including the legendary Stahlburger',
+                description: 'Freshly made, juicy burgers',
                 linkText: 'EXPLORE BURGERS'
             },
             {
@@ -44,7 +44,7 @@ export const translations = {
         categories: [
           {
               title: 'Burger',
-              description: 'Frisch zubereitete, saftige Burger – inklusive des legendären Stahlburgers.',
+              description: 'Frisch zubereitete, saftige Burger.',
               linkText: 'BURGER ENTDECKEN'
           },
           {

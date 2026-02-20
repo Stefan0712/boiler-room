@@ -57,10 +57,8 @@ export const germanMenu = [
         items: [
             { name: "Bine's Burger", price: 9.50 },
             { name: "Bine's Burger Hawaii oder Spezial", price: 10.50 },
-            { name: "Stahlburger dopp. Fleisch u. Käse", price: 14.00 },
             { name: "Bine's Burger mit Beilage", price: 11.00 },
             { name: "Bine's Burger Hawaii/Spezial m. Beilage", price: 12.00 },
-            { name: "Stahlburger m. Beilage", price: 15.50 },
             { name: "Chicken Burger", price: 10.00 },
             { name: "Chicken Burger Hawaii", price: 11.00 },
             { name: "Chicken Burger m. Beilage", price: 11.50 },

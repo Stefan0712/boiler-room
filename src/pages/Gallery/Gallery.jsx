@@ -2,6 +2,7 @@ import { translations } from '../../translations';
 import styles from './Gallery.module.css';
 import Image1 from '../../assets/gallery1.jpg';
 import Image2 from '../../assets/gallery2.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const Gallery = ({lang}) => {
 
@@ -33,23 +34,38 @@ const Gallery = ({lang}) => {
     ];
 
     return (
-        <div className={`${styles.galleryPage} container section-padding page-enter`}>
-            <div className={styles.galleryHeader}>
-                <h1 className={styles.galleryTitle}>{translations[lang].galleryTitle}</h1>
-                <div className={styles.galleryDivider}></div>
-            </div>
+        <>
+            <Helmet>
+                <title>
+                    {lang === 'en' 
+                        ? 'Gallery | Photos of Boiler Room Cochem' 
+                        : 'Galerie | Fotos vom Boiler Room Cochem'}
+                </title>
+                <meta 
+                    name="description" 
+                    content={lang === 'en' 
+                        ? 'Take a look inside the Boiler Room. Browse photos of our legendary burgers, industrial interior, and our team in Cochem.' 
+                        : 'Ein Blick in den Boiler Room. Sehen Sie Fotos unserer legendären Burger, des industriellen Ambientes und unseres Teams in Cochem.'} 
+                />
+            </Helmet>
+            <div className={`${styles.galleryPage} container section-padding page-enter`}>
+                <div className={styles.galleryHeader}>
+                    <h1 className={styles.galleryTitle}>{translations[lang].galleryTitle}</h1>
+                    <div className={styles.galleryDivider}></div>
+                </div>
 
-            <div className={styles.galleryGrid}>
-                {images.map((img, idx) => (
-                    <div key={idx} className={styles.galleryItem}>
-                        <img src={img.url} alt={img.alt} loading="lazy" />
-                        <div className={styles.galleryOverlay}>
-                            <span>{img.alt}</span>
+                <div className={styles.galleryGrid}>
+                    {images.map((img, idx) => (
+                        <div key={idx} className={styles.galleryItem}>
+                            <img src={img.url} alt={img.alt} loading="lazy" />
+                            <div className={styles.galleryOverlay}>
+                                <span>{img.alt}</span>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
