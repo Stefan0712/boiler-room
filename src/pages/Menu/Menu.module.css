@@ -1,0 +1,111 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuHeader {
+    margin-bottom: var(--spacing-xl);
+}
+
+.menuHeader h1 {
+    font-size: 3rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.menuDivider {
+    width: 100px;
+    height: 4px;
+    background-color: var(--color-wood);
+    margin: 0 auto;
+    border-radius: var(--radius-sm);
+}
+
+.menuGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-xl) var(--spacing-lg);
+    padding: 0 2rem;
+}
+
+.menuCategory {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuCategory h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-serif);
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menuItem {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+/* .menuItem:nth-child(even) {
+    background-color: rgba(211, 211, 211, 0.05);
+} */
+.itemName {
+    font-weight: 600;
+    color: #f4ecdf;
+    font-size: 1.05rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.itemPrice {
+    font-weight: 800;
+    color: #d35400;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    padding-left: 8px;
+}
+.card {
+    background-color: #272a2c;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 1px solid rgba(244, 236, 223, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menuGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .menuCategory title {
+        font-size: 2.5rem;
+    }
+    .menu {
+        padding-top: 0;
+    }
+    .itemDots {
+        display: none;
+    }
+}

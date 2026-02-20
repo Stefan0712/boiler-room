@@ -1,0 +1,169 @@
+:root {
+  /* Rustic German / Boiler Room Palette */
+  --color-bg-dark: #1a1c1d;    /* Deep industrial metal */
+  --color-bg-card: #272a2c;    /* Slightly lighter metal for cards */
+  --color-text-main: #f4ecdf;  /* Warm off-white */
+  --color-text-muted: #bdc3c7; /* Muted metal */
+  --color-accent: #d35400;     /* Fire/Rust/Copper orange */
+  --color-accent-hover: #e67e22; 
+  --color-accent-dark: #a04000;
+  
+  --color-border: rgba(244, 236, 223, 0.1);
+  --color-wood: #5c4033;       /* Dark wood */
+
+  /* Typography */
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Geometry & Shadows */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 15px rgba(211, 84, 0, 0.4);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+
+html, body {
+  min-height: 100dvh;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography Elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Page Transitions (Basic) */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp var(--transition-normal) forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(211, 84, 0, 0.3);
+}
+
+/* Layout */
+.section-padding {
+  padding: var(--spacing-xl) 0;
+}

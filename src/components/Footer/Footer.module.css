@@ -1,0 +1,57 @@
+.footer {
+    background-color: #0a0a0a;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+    color: #888;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.brand h3 {
+    color: var(--primary); /* Your amber color */
+    margin-bottom: 5px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
