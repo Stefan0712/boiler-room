@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Phone } from 'lucide-react';
 import styles from './Footer.module.css';
+import Logo from '../../assets/logo.png';
 
 const Footer = ({ lang }) => {
     const year = new Date().getFullYear();
@@ -9,8 +10,11 @@ const Footer = ({ lang }) => {
             <div className="container">
                 <div className={styles.grid}>
                     <div className={styles.brand}>
-                        <h3>BOILER ROOM</h3>
-                        <p>{lang === 'en' ? 'All prices include VAT' : 'Alle Preise inkl. MwSt.'}</p>
+                        <img className={styles.footerLogo} src={Logo} />
+                        <div className={styles.brandText}>
+                            <h3>BOILER ROOM</h3>
+                            <p>{lang === 'en' ? 'All prices include VAT' : 'Alle Preise inkl. MwSt.'}</p>
+                        </div>
                     </div>
                     <div className={styles.contacts}>
                         <a href="tel:02671910561">

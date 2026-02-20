@@ -12,7 +12,14 @@
     align-items: flex-start;
     margin-bottom: 40px;
 }
-
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.footerLogo {
+    height: 50px;
+}
 .brand h3 {
     color: var(--primary); /* Your amber color */
     margin-bottom: 5px;
